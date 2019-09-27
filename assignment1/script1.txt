@@ -1,0 +1,197 @@
+Script started on 2019-09-26 23:01:53-06:00
+]0;abdullah.khan3@csa1:~/workspaces/cpsc355/assignment1abdullah.khan3@csa1:~/workspaces/cpsc355/assignment1$ exitgit pushcommitadd assign1a.s [9Pstatus./assign1agcc -o assign1a assign1a.s[11Pvim assign1a.s gcc -o assign1a assign1a.s -g3
+]0;abdullah.khan3@csa1:~/workspaces/cpsc355/assignment1abdullah.khan3@csa1:~/workspaces/cpsc355/assignment1$ gdb assign1a
+GNU gdb (GDB) Fedora 8.1.1-4.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign1a...done.
+(gdb) s[Kdisplay/i[K[K $pc
+1: $pc = <error: No registers.>
+(gdb) start
+Temporary breakpoint 1 at 0x4005d4: file assign1a.s, line 13.
+Starting program: /home/ugb/abdullah.khan3/workspaces/cpsc355/assignment1/assign1a 
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+
+Temporary breakpoint 1, main () at assign1a.s:13
+13		stp x29, x30, [sp, -16]!
+1: $pc = (void (*)()) 0x4005d4 <main>
+(gdb) ni
+14		mov x29, sp
+1: $pc = (void (*)()) 0x4005d8 <main+4>
+(gdb) ni
+17		mov x20, -10
+1: $pc = (void (*)()) 0x4005dc <main+8>
+(gdb) ni
+19		mov x21, 0
+1: $pc = (void (*)()) 0x4005e0 <main+12>
+(gdb) ni
+21		mov x22, -500
+1: $pc = (void (*)()) 0x4005e4 <main+16>
+(gdb) ni
+24		b test
+1: $pc = (void (*)()) 0x4005e8 <main+20>
+(gdb) p $x20
+$1 = -10
+(gdb) p $x21
+$2 = 0
+(gdb) p $x21[K2
+$3 = -500
+(gdb) in[K[Kni
+test () at assign1a.s:30
+30		cmp x20, 4
+1: $pc = (void (*)()) 0x4005ec <test>
+(gdb) ni
+31		b.gt printResult
+1: $pc = (void (*)()) 0x4005f0 <test+4>
+(gdb) nip $x2210
+$4 = -10
+(gdb) p $x20[4Pni
+36	    mov x21, 0
+1: $pc = (void (*)()) 0x4005f4 <test+8>
+(gdb) ni
+37	    mov x23, 0
+1: $pc = (void (*)()) 0x4005f8 <test+12>
+(gdb) ni
+38	    mov x24, 0
+1: $pc = (void (*)()) 0x4005fc <test+16>
+(gdb) ni
+39	    mov x25, 0
+1: $pc = (void (*)()) 0x400600 <test+20>
+(gdb) ni
+40		mov x28, 0
+1: $pc = (void (*)()) 0x400604 <test+24>
+(gdb) ni
+43	    mov x28, 11
+1: $pc = (void (*)()) 0x400608 <test+28>
+(gdb) ni
+44	    mul x25, x20, x28
+1: $pc = (void (*)()) 0x40060c <test+32>
+(gdb) ni
+48	    mov x24, -22
+1: $pc = (void (*)()) 0x400610 <test+36>
+(gdb) ni
+49	    mul x23, x20, x20
+1: $pc = (void (*)()) 0x400614 <test+40>
+(gdb) ni
+50	    mul x24, x24, x23
+1: $pc = (void (*)()) 0x400618 <test+44>
+(gdb) ni
+51	    add x24, x24, x25
+1: $pc = (void (*)()) 0x40061c <test+48>
+(gdb) ni
+54	    mov x23, 0
+1: $pc = (void (*)()) 0x400620 <test+52>
+(gdb) ni[K[Kp $x25[K4
+$5 = -2310
+(gdb) p $x24[4Pni
+55	    mov x28, 0
+1: $pc = (void (*)()) 0x400624 <test+56>
+(gdb) ni
+58		mov x23, -2
+1: $pc = (void (*)()) 0x400628 <test+60>
+(gdb) ni
+59		mul x28, x20, x20
+1: $pc = (void (*)()) 0x40062c <test+64>
+(gdb) ni
+60		mul x28, x28, x20
+1: $pc = (void (*)()) 0x400630 <test+68>
+(gdb) ni
+61	    mul x23, x23, x28
+1: $pc = (void (*)()) 0x400634 <test+72>
+(gdb) ni
+62	    add x23, x23, x24
+1: $pc = (void (*)()) 0x400638 <test+76>
+(gdb) ni
+65	    add x23, x23, 57
+1: $pc = (void (*)()) 0x40063c <test+80>
+(gdb) ni
+68	    cmp x23, x22
+1: $pc = (void (*)()) 0x400640 <test+84>
+(gdb) nip $x24[4Pnip $x24[K3
+$6 = -253
+(gdb) p $x23[4Pni
+69	    b.gt newMaximum
+1: $pc = (void (*)()) 0x400644 <test+88>
+(gdb) ni
+newMaximum () at assign1a.s:94
+94	    mov x22, x23
+1: $pc = (void (*)()) 0x400678 <newMaximum>
+(gdb) nip $x23[4Pnip $x23[K2
+$7 = -500
+(gdb) p $x22[4Pni
+95	    b endLoop
+1: $pc = (void (*)()) 0x40067c <newMaximum+4>
+(gdb) nip $x22[4Pnip $x22
+$8 = -253
+(gdb) p $x22[4Pni
+endLoop () at assign1a.s:74
+74	    adrp x0, outputXY
+1: $pc = (void (*)()) 0x40064c <endLoop>
+(gdb) ni
+75	    add x0, x0, :lo12:outputXY
+1: $pc = (void (*)()) 0x400650 <endLoop+4>
+(gdb) ni
+77	    mov x1, x20
+1: $pc = (void (*)()) 0x400654 <endLoop+8>
+(gdb) ni
+78	    mov x2, x23
+1: $pc = (void (*)()) 0x400658 <endLoop+12>
+(gdb) ni
+80	    bl printf
+1: $pc = (void (*)()) 0x40065c <endLoop+16>
+(gdb) ni
+current X = -10, Y = -253 
+82	    add x20, x20, 1
+1: $pc = (void (*)()) 0x400660 <endLoop+20>
+(gdb) ni
+85		adrp x0, outputMax
+1: $pc = (void (*)()) 0x400664 <endLoop+24>
+(gdb) ni
+86	    add x0, x0, :lo12:outputMax
+1: $pc = (void (*)()) 0x400668 <endLoop+28>
+(gdb) ni
+87	    mov x1, x22
+1: $pc = (void (*)()) 0x40066c <endLoop+32>
+(gdb) ni
+88	    bl printf
+1: $pc = (void (*)()) 0x400670 <endLoop+36>
+(gdb) ni
+  maximum: -253 
+90	    b test
+1: $pc = (void (*)()) 0x400674 <endLoop+40>
+(gdb) q[Kpx[K $x22
+$9 = -253
+(gdb) p $x22[4Pni
+current X = -9, Y = -366 
+  maximum: -253 
+90	    b test
+1: $pc = (void (*)()) 0x400674 <endLoop+40>
+(gdb) ni[K[Kqp $x22[4Pnip $x22
+$10 = -253
+(gdb) p $x22q[Kp $x22q[K
+A debugging session is active.
+
+	Inferior 1 [process 25069] will be killed.
+
+Quit anyway? (y or n) y
+]0;abdullah.khan3@csa1:~/workspaces/cpsc355/assignment1abdullah.khan3@csa1:~/workspaces/cpsc355/assignment1$ exit
+exit
+
+Script done on 2019-09-26 23:09:39-06:00
