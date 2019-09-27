@@ -1,12 +1,15 @@
+// assign string literals for later use when printing to stdout
 outputXY:	.string "current X = %d, Y = %d \n"
 outputMax:	.string "  maximum: %d \n"
-
 result: .string "\nthe global max is %d\n"
 
+// ensure instructions are properly aligned
+// make "main" visible to linker
 .balign 4
 .global main
 
 main:
+    // save state
 	stp x29, x30, [sp, -16]!
 	mov x29, sp
 
@@ -67,35 +70,41 @@ test:
     b endLoop
 
 endLoop: 
-    // print current x,y and max so far
+    // print current x,y values
     adrp x0, outputXY
     add x0, x0, :lo12:outputXY
+    // value for first %d is the x value and the y value for the second %d
     mov x1, x20
     mov x2, x23
+    // branch to and link printf
     bl printf
+    // increment the current x value (used as a loop counter)
     add x20, x20, 1
 
-	// printf for current maximum value
+	// print current maximum value so far
 	adrp x0, outputMax
     add x0, x0, :lo12:outputMax
     mov x1, x22
     bl printf
+    // move to the next iteration of the loop after printing to stdout
     b test
 
 newMaximum:
+    // set the new maximum and branch to the end of the loop (printing to stdout)
     mov x22, x23
     b endLoop
 
 printResult:
+    // printing final result, the maximum value of the polynomial
     adrp x0, result
     add x0, x0, :lo12:result
     mov x1, x22
-    //mov x2, x26
     bl printf
     b done
 
 done:
-	// exit program
+	// exit program with exit code 0
 	mov x0, 0
+    // restore state and return
 	ldp x29, x30, [sp], 16
 	ret
