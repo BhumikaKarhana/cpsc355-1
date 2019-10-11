@@ -24,11 +24,11 @@ main:
     define(temp2, x26)                  // "temp2" set to the 64 bit register x26
     
 
-    movz    multiplicand, 0xFEFE, lsl 16        // assign first half of hexadecimal value to multiplicand and left shift by 16 bits
-    mov     temp3, 0xFEFE                       // move the rest of the number in a temp register
+    movz    multiplicand, 0xF0F0, lsl 16        // assign first half of hexadecimal value to multiplicand and left shift by 16 bits
+    mov     temp3, 0xF0F0                       // move the rest of the number in a temp register
     add     multiplicand, multiplicand, temp3   // add the temp register and the first half to get the whole number stored in multiplicand
 
-    mov     multiplier, 70              // assign integer value to multiplier
+    mov     multiplier, -256              // assign integer value to multiplier
     mov     product, 0                  // assign integer value to product
 
     // print information about the variables that exist right now
