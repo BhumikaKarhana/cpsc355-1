@@ -1,0 +1,199 @@
+Script started on 2019-10-25 15:00:50-06:00
+]0;abdullah.khan3@csa2:~/workspaces/cpsc355/assignment3abdullah.khan3@csa2:~/workspaces/cpsc355/assignment3$ [32P(reverse-i-search)`':[C[17@m': vim assign3.asm4': m4 assign3.asm > assign3.s && gcc -o assign3 assign3.s[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[30@abdullah.khan3@csa2:~/workspaces/cpsc355/assignment3$[C[C
+]0;abdullah.khan3@csa2:~/workspaces/cpsc355/assignment3abdullah.khan3@csa2:~/workspaces/cpsc355/assignment3$ gdb assign3
+GNU gdb (GDB) Fedora 8.1.1-4.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign3...(no debugging symbols found)...done.
+(gdb) displa.[Ky/i $pc
+1: x/i $pc
+<error: No registers.>
+(gdb) start
+Temporary breakpoint 1 at 0x400610
+Starting program: /home/ugb/abdullah.khan3/workspaces/cpsc355/assignment3/assign3 
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+
+Temporary breakpoint 1, 0x0000000000400610 in main ()
+1: x/i $pc
+=> 0x400610 <main+16>:	ldr	w19, [x29, #16]
+(gdb) ni
+0x0000000000400614 in main ()
+1: x/i $pc
+=> 0x400614 <main+20>:	mov	w19, #0x0                   	// #0
+(gdb) ni
+0x0000000000400618 in main ()
+1: x/i $pc
+=> 0x400618 <main+24>:	str	w19, [x29, #16]
+(gdb) ni
+0x000000000040061c in main ()
+1: x/i $pc
+=> 0x40061c <main+28>:	b	0x400654 <loop1Test>
+(gdb) ni
+0x0000000000400654 in loop1Test ()
+1: x/i $pc
+=> 0x400654 <loop1Test>:	cmp	w19, #0x32
+(gdb) ni
+0x0000000000400658 in loop1Test ()
+1: x/i $pc
+=> 0x400658 <loop1Test+4>:	b.lt	0x400620 <loop1>  // b.tstop
+(gdb) si
+0x0000000000400620 in loop1 ()
+1: x/i $pc
+=> 0x400620 <loop1>:	ldr	w19, [x29, #16]
+(gdb) ni 20
+V[0]: 103
+V[1]: 198
+V[2]: 105
+V[3]: 115
+0x000000000040064c in loop1 ()
+1: x/i $pc
+=> 0x40064c <loop1+44>:	add	w19, w19, #0x1
+(gdb) x/d $x28
+0xffffffffefac:	103
+(gdb) x/d $x28[C[C[C[C[C[C[3Pni 20
+V[4]: 81
+V[5]: 255
+V[6]: 74
+V[7]: 236
+V[8]: 41
+V[9]: 205
+V[10]: 186
+0x0000000000400648 in loop1 ()
+1: x/i $pc
+=> 0x400648 <loop1+40>:	mov	w26, #0x0                   	// #0
+(gdb) ni 20x/d $x28
+0xffffffffefac:	103
+(gdb) nix/d $x28[C[C[C[C[C[C[3Pni 20[K[K30
+V[11]: 171
+V[12]: 242
+V[13]: 251
+V[14]: 227
+V[15]: 70
+V[16]: 124
+V[17]: 194
+V[18]: 84
+V[19]: 248
+V[20]: 27
+0x0000000000400648 in loop1 ()
+1: x/i $pc
+=> 0x400648 <loop1+40>:	mov	w26, #0x0                   	// #0
+(gdb) ni 30
+V[21]: 232
+V[22]: 231
+V[23]: 141
+V[24]: 118
+V[25]: 90
+V[26]: 46
+V[27]: 99
+V[28]: 51
+V[29]: 159
+V[30]: 201
+0x0000000000400648 in loop1 ()
+1: x/i $pc
+=> 0x400648 <loop1+40>:	mov	w26, #0x0                   	// #0
+(gdb) ni 30
+V[31]: 154
+V[32]: 102
+V[33]: 50
+V[34]: 13
+V[35]: 183
+V[36]: 49
+V[37]: 88
+V[38]: 163
+V[39]: 90
+V[40]: 37
+0x0000000000400648 in loop1 ()
+1: x/i $pc
+=> 0x400648 <loop1+40>:	mov	w26, #0x0                   	// #0
+(gdb) ni 30
+V[41]: 93
+V[42]: 5
+V[43]: 23
+V[44]: 88
+V[45]: 233
+V[46]: 94
+V[47]: 212
+V[48]: 171
+V[49]: 178
+
+Sorted array:
+V[0]: 5
+V[1]: 13
+V[2]: 23
+V[3]: 27
+V[4]: 37
+V[5]: 41
+V[6]: 46
+V[7]: 49
+V[8]: 50
+V[9]: 51
+V[10]: 70
+V[11]: 74
+V[12]: 81
+V[13]: 84
+V[14]: 88
+V[15]: 88
+V[16]: 90
+V[17]: 90
+V[18]: 93
+V[19]: 94
+V[20]: 99
+V[21]: 102
+V[22]: 103
+V[23]: 105
+V[24]: 115
+V[25]: 118
+V[26]: 124
+V[27]: 141
+V[28]: 154
+V[29]: 159
+V[30]: 163
+V[31]: 171
+V[32]: 171
+V[33]: 178
+V[34]: 183
+V[35]: 186
+V[36]: 194
+V[37]: 198
+V[38]: 201
+V[39]: 205
+V[40]: 212
+V[41]: 227
+V[42]: 231
+V[43]: 232
+V[44]: 233
+V[45]: 236
+V[46]: 242
+V[47]: 248
+V[48]: 251
+V[49]: 255
+[Inferior 1 (process 6412) exited normally]
+(gdb) ni[K[Kni 30[K[K[K[K[Kni 30x/d $x28[C[C[C[C[C[C[3Pni 20x/d $x28
+No registers.
+(gdb) echo The base address [Ks [K[K before [K[K[K[K[K[K[Kin the first loop h[Ks[Khad [1P[1P[1P[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[Ksored 102[K3[1@t[C[C[C[C[C[C[C[C
+The base in the first loop stored 103(gdb) echo /n[K[K\n
+
+(gdb) echo Now [K, the base stores 5, which is [K[K[K[K[K[K[K[K[Kbeof[Kf[K[Kfore prontin[K[K[K[K[Kinting the sorted array \n
+Now, the base stores 5, before printing the sorted array 
+(gdb) q
+]0;abdullah.khan3@csa2:~/workspaces/cpsc355/assignment3abdullah.khan3@csa2:~/workspaces/cpsc355/assignment3$ exit
+exit
+
+Script done on 2019-10-25 15:05:22-06:00
