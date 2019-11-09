@@ -1,0 +1,166 @@
+Script started on 2019-11-09 14:35:00-07:00
+No such schema “org.gnome.gedit.preferences.editor”
+/home/ugb/abdullah.khan3/.zshrc:source:95: no such file or directory: /home/abdullah/.oh-my-zsh/oh-my-zsh.sh
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                  [0m[27m[24m[J[abdullah.khan3@csa1]~/workspaces/cpsc355/assignment4% [K[?2004hexitm4 assign4.asm > assign4.s && gcc -o assign4 assign4.s && gdb assign4[69Dexit                                                                 [65Dvim assign4.asm[15Dcd workspaces/cpsc355/assignment4[33Dexit                             [29Dvim assign4.asm[15D./test         [8Dgcc test.c -o test[18D./test            [11Dvim assign4.asm[15Dexit           [11Dcd workspaces/cpsc355/assignment4[33Dvim assign4.asm                  [18D[15Dexit           [11Dm4 assign4.asm > assign4.s && gcc -o assign4 assign4.s && gdb assign4[69Dexit                                                                 [65D    exitm4 assign4.asm > assign4.s && gcc -o assign4 assign4.s && gdb assign4[?2004l
+GNU gdb (GDB) Fedora 8.1.1-4.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign4...(no debugging symbols found)...done.
+(gdb) x/i $px[Kc
+No registers.
+(gdb) b [K[Kstart
+Temporary breakpoint 1 at 0x400748
+Starting program: /home/ugb/abdullah.khan3/workspaces/cpsc355/assignment4/assign4 
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+
+Temporary breakpoint 1, 0x0000000000400748 in main ()
+(gdb) ni
+0x000000000040074c in main ()
+(gdb) ni
+0x0000000000400750 in main ()
+(gdb) ni[K[Knistartx/i $pc
+=> 0x400750 <main+28>:	bl	0x40062c <newCuboid>
+(gdb) ni
+0x0000000000400754 in main ()
+(gdb) nix/i $pc[1P[1@d[1@i[1@a[1@p[1@l[1P[1P[1P[1@s[1@p[1@l[1@a[1@u[1@y[1P[1P[1@y
+1: x/i $pc
+=> 0x400754 <main+32>:	adrp	x0, 0x400000
+(gdb) display/i $pc[C[C[C[C[C[Cni[K
+0x0000000000400758 in main ()
+1: x/i $pc
+=> 0x400758 <main+36>:	add	w0, w0, #0x5fb
+(gdb) ni
+0x000000000040075c in main ()
+1: x/i $pc
+=> 0x40075c <main+40>:	bl	0x400480 <printf@plt>
+(gdb) ni
+Initial cuboid values:
+0x0000000000400760 in main ()
+1: x/i $pc
+=> 0x400760 <main+44>:	mov	x0, x19
+(gdb) ni
+0x0000000000400764 in main ()
+1: x/i $pc
+=> 0x400764 <main+48>:	adrp	x1, 0x400000
+(gdb) ni
+0x0000000000400768 in main ()
+1: x/i $pc
+=> 0x400768 <main+52>:	add	w1, w1, #0x5ee
+(gdb) ni
+0x000000000040076c in main ()
+1: x/i $pc
+=> 0x40076c <main+56>:	bl	0x4006c4 <printCuboid>
+(gdb) ni
+Cuboid first origin = (1868723523, 622879849)
+	Base width = 0 Base length = 124
+	Height = 119
+	Volume = 4329488
+
+0x0000000000400770 in main ()
+1: x/i $pc
+=> 0x400770 <main+60>:	mov	x0, x20
+(gdb) x\12d $x29 + offset
+Invalid character '\' in expression.
+(gdb) x\12d $x29 + offset[1P[1@/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K16
+0xfffffffff070:	0	0	2	2
+0xfffffffff080:	0	0	2	2
+0xfffffffff090:	3	0	16843009	0
+(gdb) x/12d $x29 + 16
+0xfffffffff070:	0	0	2	2
+0xfffffffff080:	0	0	2	2
+0xfffffffff090:	3	0	16843009	0
+(gdb) x/12d $x29 + 16[C[C[C[C[C[C[C\12d $x29 + offset[C[C[C[C[C[Cni[K
+0x0000000000400774 in main ()
+1: x/i $pc
+=> 0x400774 <main+64>:	adrp	x1, 0x400000
+(gdb) ni
+0x0000000000400778 in main ()
+1: x/i $pc
+=> 0x400778 <main+68>:	add	w1, w1, #0x5f4
+(gdb) ni
+0x000000000040077c in main ()
+1: x/i $pc
+=> 0x40077c <main+72>:	bl	0x4006c4 <printCuboid>
+(gdb) ni
+Cuboid second origin = (1868723523, 622879849)
+	Base width = 0 Base length = 4330099
+	Height = 10
+	Volume = 10
+
+0x0000000000400780 in main ()
+1: x/i $pc
+=> 0x400780 <main+76>:	mov	x0, x19
+(gdb) nix/12d $x29 + 16
+0xfffffffff070:	0	0	2	2
+0xfffffffff080:	0	0	2	2
+0xfffffffff090:	3	0	16843009	0
+(gdb) x/12d $x29 + 16[C[C[C[C[C[Cni[K
+0x0000000000400784 in main ()
+1: x/i $pc
+=> 0x400784 <main+80>:	mov	x1, x20
+(gdb) ni
+0x0000000000400788 in main ()
+1: x/i $pc
+=> 0x400788 <main+84>:	bl	0x4006e8 <equalSize>
+(gdb) ni
+0x000000000040078c in main ()
+1: x/i $pc
+=> 0x40078c <main+88>:	mov	x0, x21
+(gdb) 
+0x0000000000400790 in main ()
+1: x/i $pc
+=> 0x400790 <main+92>:	cmp	x21, xzr
+(gdb) ni
+0x0000000000400794 in main ()
+1: x/i $pc
+=> 0x400794 <main+96>:	b.eq	0x40079c <innerIf>  // b.none
+(gdb) ni
+0x0000000000400798 in main ()
+1: x/i $pc
+=> 0x400798 <main+100>:	b	0x4007b8 <printChanged>
+(gdb) ni
+
+Changed cuboid values:
+Cuboid first origin = (1868723523, 622879849)
+	Base width = 0 Base length = 4330104
+	Height = 1634222858
+	Volume = 1651860256
+
+Cuboid second origin = (1868723523, 622879849)
+	Base width = 0 Base length = 4330102
+	Height = 10
+	Volume = 10
+
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000000000 in ?? ()
+1: x/i $pc
+=> 0x0:	<error: Cannot access memory at address 0x0>
+(gdb) nix/12d $x29 + 16[C[C[C[C[C[Cni[Kx/12d $x29 + 16
+0x10:	Cannot access memory at address 0x10
+(gdb) exit[K[K[K[Kq
+A debugging session is active.
+
+	Inferior 1 [process 27969] will be killed.
+
+Quit anyway? (y or n) y
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                  [0m[27m[24m[J[abdullah.khan3@csa1]~/workspaces/cpsc355/assignment4% [K[?2004heexit[?2004l
+
+Script done on 2019-11-09 14:37:21-07:00
