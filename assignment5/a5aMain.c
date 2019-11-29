@@ -102,7 +102,7 @@ return TOOBIG;
 }
 
 #define BUFSIZE   100
-char buf[BUFSIZE];
+/*char buf[BUFSIZE];
 int bufp = 0;
 int getch()
 {
@@ -116,3 +116,4 @@ else
 buf[bufp++] = c;
 }
 
+*/

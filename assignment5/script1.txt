@@ -1,0 +1,10 @@
+Script started on 2019-11-29 15:40:56-07:00
+/home/ugb/abdullah.khan3/.zshrc:source:95: no such file or directory: /home/abdullah/.oh-my-zsh/oh-my-zsh.sh
+[1m[7m%[27m[1m[0m                                                                                                                                                                                               [0m[27m[24m[J[abdullah.khan3@csa3]~/workspaces/cpsc355/assignment5% [K[?2004hmmake[?2004l
+gcc -o a5a a5aMain.o a5a.o
+[1m[7m%[27m[1m[0m                                                                                                                                                                                               [0m[27m[24m[J[abdullah.khan3@csa3]~/workspaces/cpsc355/assignment5% [K[?2004h../a5a[?2004l
+1 2 + =
+zsh: segmentation fault (core dumped)  ./a5a
+[1m[7m%[27m[1m[0m                                                                                                                                                                                               [0m[27m[24m[J[abdullah.khan3@csa3]~/workspaces/cpsc355/assignment5% [K[?2004heexit[?2004l
+
+Script done on 2019-11-29 15:41:17-07:00
