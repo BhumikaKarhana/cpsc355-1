@@ -5,8 +5,8 @@
 #define MAXOP   20
 #define NUMBER  '0'
 #define TOOBIG  '9'
-//#define MAXVAL  100
-//#define BUFSIZE 100
+#define MAXVAL  100
+#define BUFSIZE 100
 
 /*  Function prototypes  */
 extern int push(int f);
@@ -27,6 +27,7 @@ int main() {
                 break;
             case '+':
                 push(pop() + pop());
+                printf("added\n");
                 break;
             case '*':
                 push(pop() * pop());
@@ -59,7 +60,7 @@ int main() {
     return 0;
 }
 
-int sp = 0;
+/*int sp = 0;
 int val[MAXVAL];
 int pop()
 {
@@ -76,7 +77,7 @@ void clear()
 {
 sp = 0;
 }
-
+*/
 int getop(char *s, int lim)
 {
 int i, c;
@@ -100,7 +101,7 @@ return TOOBIG;
 }
 }
 
-//#define BUFSIZE   100
+#define BUFSIZE   100
 char buf[BUFSIZE];
 int bufp = 0;
 int getch()
@@ -114,3 +115,4 @@ printf("ungetch: too many characters\n");
 else
 buf[bufp++] = c;
 }
+
